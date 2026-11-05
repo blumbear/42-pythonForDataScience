@@ -15,7 +15,7 @@ def main(string: str) -> int:
             res["digit"] += 1
         elif i in punctuation:
             res["punc"] += 1
-        elif i == ' ':
+        elif i in " \n":
             res["space"] += 1
 
     print(f"The text contains {len(string)} characters:")
@@ -36,3 +36,6 @@ if __name__ == "__main__":
             main(sys.argv[1])
     except AssertionError as e:
         print("AssertionError :", e)
+
+
+# "aqsdqsd   a ZA 1  :;,:,23\nmllqsjkd"
