@@ -1,2 +1,2 @@
-def all_thing_is_obj(object: any):
+def all_thing_is_obj(object: any) -> int:
     return (type(object))
