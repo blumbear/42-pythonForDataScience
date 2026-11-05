@@ -4,7 +4,8 @@ import sys
 
 def main(string: str, size: int) -> list:
     tmp = string.split(' ')
-    res = [obj for obj in tmp if len(obj) > size]
+    less_than = lambda obj, size : len(obj) > size
+    res = [obj for obj in tmp if less_than(obj, size)]
     return res
 
 if __name__ == "__main__":
