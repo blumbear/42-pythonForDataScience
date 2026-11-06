@@ -19,6 +19,12 @@ morse_alphabet = {
 
 
 def sos(message: str) -> str:
+    """A program that takes a string as an argument and encodes
+    it into Morse Code:
+    • The program supports space and alphanumeric characters
+    • An alphanumeric character is represented by dots . and dashes -
+    • Complete morse characters are separated by a single space
+    • A space character is represented by a slash /"""
     res = ''
     for i in message:
         if i.upper() not in morse_alphabet:
@@ -37,3 +43,5 @@ if __name__ == "__main__":
             sos(sys.argv[1])
     except AssertionError as e:
         print("AssertionError :", e)
+
+print(sos.__doc__)

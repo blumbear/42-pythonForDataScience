@@ -5,6 +5,9 @@ punctuation = "!\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~"
 
 
 def main(string: str) -> int:
+    """ Takes a single string argument and displays the sums of its upper-case
+    characters, lower-case characters, punctuation characters, digits and
+    spaces."""
     res = {"upper": 0, "lower": 0, "punc": 0, "space": 0, "digit": 0}
     for i in string:
         if i.isupper():
@@ -37,5 +40,5 @@ if __name__ == "__main__":
     except AssertionError as e:
         print("AssertionError :", e)
 
-
+# print(main.__doc__)
 # "aqsdqsd   a ZA 1  :;,:,23\nmllqsjkd"
