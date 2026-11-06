@@ -1,12 +1,14 @@
-from ft_filter import ft_filter
 import sys
+
+
+less_than = lambda obj, size: len(obj) > size
 
 
 def main(string: str, size: int) -> list:
     tmp = string.split(' ')
-    less_than = lambda obj, size : len(obj) > size
     res = [obj for obj in tmp if less_than(obj, size)]
     return res
+
 
 if __name__ == "__main__":
     try:
@@ -20,5 +22,5 @@ if __name__ == "__main__":
     except AssertionError as e:
         print("AssertionError :", e)
     except ValueError:
-        print("Wrong Value, you must give a string and an integer, in this order.")
-    
+        print("Wrong Value, you must give a string",
+              "and an integer, in this order.")
