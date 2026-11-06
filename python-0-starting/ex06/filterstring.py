@@ -3,8 +3,8 @@ from ft_filter import ft_filter
 
 
 def main(string: str, size: int) -> list:
-    """
-    """
+    """The program output a list of words from S that have a length
+    greater than N."""
     tmp = string.split(' ')
     return ft_filter(lambda obj: len(obj) > size, tmp)
 
@@ -23,3 +23,5 @@ if __name__ == "__main__":
     except ValueError:
         print("Wrong Value, you must give a string",
               "and an integer, in this order.")
+
+# print(main.__doc__)
