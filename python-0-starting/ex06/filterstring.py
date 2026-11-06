@@ -1,13 +1,12 @@
 import sys
-
-
-less_than = lambda obj, size: len(obj) > size
+from ft_filter import ft_filter
 
 
 def main(string: str, size: int) -> list:
+    """
+    """
     tmp = string.split(' ')
-    res = [obj for obj in tmp if less_than(obj, size)]
-    return res
+    return ft_filter(lambda obj: len(obj) > size, tmp)
 
 
 if __name__ == "__main__":
