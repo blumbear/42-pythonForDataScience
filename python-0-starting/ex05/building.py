@@ -34,7 +34,8 @@ if __name__ == "__main__":
         if len(sys.argv) > 2:
             raise AssertionError("more than one argument is provided")
         elif len(sys.argv) == 1:
-            print("Give a string as an argument.\nExemple: \"test12Rqzd  ',\"")
+            print("What is the text to count ?")
+            main(input())
         else:
             main(sys.argv[1])
     except AssertionError as e:
